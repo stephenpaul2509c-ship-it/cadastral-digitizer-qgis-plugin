@@ -1,0 +1,48 @@
+# ============================================================
+# Cadastral Map Digitizer - requirements.txt
+# Full pipeline: Inference + Post-Processing
+# ============================================================
+# INSTALL ORDER:
+#   Step 1: python -m pip install --upgrade pip
+#   Step 2: pip install torch torchvision (see GPU note below)
+#   Step 3: pip install -r requirements.txt
+#
+# GPU install (pick one):
+#   CUDA 11.8 : pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+#   CUDA 12.1 : pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+#   CPU only  : pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+# ============================================================
+
+
+# ── Computer Vision ───────────────────────────────────────
+opencv-python>=4.8.0
+
+# ── Geospatial (Raster) ───────────────────────────────────
+rasterio>=1.3.0
+
+# ── Geospatial (Vector) ───────────────────────────────────
+geopandas>=0.14.0
+shapely>=2.0.0
+
+# ── Deep Learning ─────────────────────────────────────────
+segmentation-models-pytorch>=0.3.3
+timm>=0.9.0
+
+# ── Augmentation ──────────────────────────────────────────
+albumentations>=1.3.0
+
+# ── Skeletonization ───────────────────────────────────────
+scikit-image>=0.21.0
+
+# ── Skeleton → Vector ─────────────────────────────────────
+skan>=0.11.0
+
+# ── Snap (spatial indexing) ───────────────────────────────
+scipy>=1.11.0
+
+# ── Core Numerics ─────────────────────────────────────────
+numpy>=1.24.0
+
+# ── Utilities ─────────────────────────────────────────────
+tqdm>=4.65.0
+pathlib2>=2.3.7
